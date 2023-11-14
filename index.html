@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="https://cdn6.aptoide.com/imgs/7/0/3/70367ea486a56b195f6fb9230d458dfb_icon.png" type="image/x-icon">
+</head>
+<body style="background-color: rgb(231, 231, 231);">
+    <div class="head">
+        <img src="https://cdn6.aptoide.com/imgs/7/0/3/70367ea486a56b195f6fb9230d458dfb_icon.png" alt="">
+        <h3>BMI Calculator</h3>
+    </div>
+    <div class="calc" style="background-color: white; display: flex;">
+    <div>
+        <form class="form" id="form" >
+        <div style="display: flex; margin-bottom: 20px;">
+        <div class="gender">
+        <label >Gender</label> 
+        <div class="genderbt">
+                <input type="radio" name="gender" value="male"> Male
+                <input class="ms-3" type="radio" name="gender" value="female"> Female
+            </div>
+    </div>
+    <div id="age">
+        <label for="age" class="age">Age</label>
+        <div style="display: flex;">
+        <input class="form-control" type="number" id="age"><span>between 2yrs to 120yrs</span>
+    </div>
+</div>
+</div>
+        <div style="display: flex; margin-bottom: 20px;">
+            <div id="weight">
+        <label for="weight">Weight</label>
+        <input class="form-control" type="number" id="weight" placeholder="in kg">
+        </div>
+        <div id="height">
+        <label for="height">Height</label>
+        <input class="form-control" type="number" id="height" placeholder="in cm">
+    </div>
+        </div>
+        <button type="reset" class="rest-btn btn" onclick="resetForm()">Reset</button>
+        <button class="calc-btn btn" type="submit" onclick="submitForm()">Calculate</button>
+    </form>
+</div>
+<section class="output">
+<h3>Your BMI is</h3>
+<p id="bmi">0</p>
+<p id="result"></p>
+<div id="bmi-band" class="color-band">
+    <div class="underweight"></div>
+    <div class="healthy"></div>
+    <div class="overweight"></div>
+    <div class="obese"></div>
+</div>
+<div class="bmi-labels">
+    <div class="label">Underweight 
+        <p>&lt; 18.5</p></div>
+    <div class="label">healthy
+        <p>18.5 - 24.9</p></div>
+    <div class="label">Overweight
+        <p>25 - 29.9</p>
+    </div>
+    <div class="label">Obese
+        <p>&ge; 30</p>
+    </div>
+</div>
+</section>
+</div>
+</body>
+</html>
