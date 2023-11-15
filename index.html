@@ -17,7 +17,6 @@
     </div>
     <div class="calc" style="background-color: white; display: flex;">
     <div>
-        <form class="form" id="form" >
         <div style="display: flex; margin-bottom: 20px;">
         <div class="gender">
         <label >Gender</label> 
@@ -34,18 +33,17 @@
 </div>
 </div>
         <div style="display: flex; margin-bottom: 20px;">
-            <div id="weight">
-        <label for="weight">Weight</label>
+            <div id="weights">
+        <label>Weight</label>
         <input class="form-control" type="number" id="weight" placeholder="in kg">
         </div>
-        <div id="height">
-        <label for="height">Height</label>
+        <div id="heights">
+        <label >Height</label>
         <input class="form-control" type="number" id="height" placeholder="in cm">
     </div>
         </div>
         <button type="reset" class="rest-btn btn" onclick="resetForm()">Reset</button>
         <button class="calc-btn btn" type="submit" onclick="submitForm()">Calculate</button>
-    </form>
 </div>
 <section class="output">
 <h3>Your BMI is</h3>

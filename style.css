@@ -59,17 +59,17 @@ input[name="gender"] {
     margin-left: 2%;
 font-style: italic;
 }
-#weight {
+#weights {
     width: 300px;
 }
-#weight input{
+#weights input{
     width: 200px;
     margin-top: 10px;  
 }
-#height {
+#heights {
     width: 300px;
 }
-#height input{
+#heights input{
     width: 200px;
     margin-top: 10px;  
 }

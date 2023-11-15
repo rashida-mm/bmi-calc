@@ -1,20 +1,17 @@
-
 function resetForm() {
   const bmiText = document.getElementById("bmi");
   const resultText = document.getElementById("result");
   bmiText.textContent = 0;
-  bmiText.className = "";
   resultText.textContent = "";
 }
 
 function submitForm() {
   const bmiText = document.getElementById("bmi");
   const resultText = document.getElementById("result");
-  const form = document.getElementById("form");
 
-  event.preventDefault();
-  const weight = form.weight.value;
-  const height = form.height.value;
+  
+  const weight = parseFloat(document.getElementById("weight").value);
+  const height = parseFloat(document.getElementById("height").value);
 
   if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
       alert("Please enter a valid weight and height");
