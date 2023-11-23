@@ -3,17 +3,19 @@ function resetForm() {
   const resultText = document.getElementById("result");
   bmiText.textContent = 0;
   resultText.textContent = "";
+  document.getElementById("bmiform").reset()
 }
 
 function submitForm() {
   const bmiText = document.getElementById("bmi");
   const resultText = document.getElementById("result");
 
+  const age = parseFloat(document.getElementById("age").value);
   const weight = parseFloat(document.getElementById("weight").value);
   const height = parseFloat(document.getElementById("height").value);
 
   if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
-      alert("Please enter a valid weight and height");
+      alert("Please enter valid details ");
   }
 else{
   const heightInMeters = height / 100; // cm -> m
